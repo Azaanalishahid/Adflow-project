@@ -1,0 +1,27 @@
+.electric-border-container {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 2px;
+  background: var(--border-color);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.electric-border-container.active {
+  background: linear-gradient(90deg, var(--accent-primary), #A855F7, var(--accent-primary));
+  background-size: 200% auto;
+  animation: shine 3s linear infinite;
+}
+
+.electric-border-inner {
+  background: var(--bg-secondary);
+  border-radius: calc(var(--radius-lg) - 2px);
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
